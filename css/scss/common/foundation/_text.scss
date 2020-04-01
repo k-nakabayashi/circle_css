@@ -1,0 +1,98 @@
+
+/*==================================================
+　　　　　タイポグラフィ
+==================================================*/
+//どこでもフォント
+
+
+//基底フォント
+body {
+
+}
+
+h1 {
+
+}
+
+h2 {
+  
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+.f-txt1 {
+  font-size: 30px;
+  // @include u-media-sm {
+
+  // }
+  // @include u-media-md {
+
+  // }
+  @include u-media-lg {
+    font-size: 48px;
+  }
+  // @include u-media-xl {
+    
+  // }
+}
+.f-txt2 {
+  font-weight: normal;
+  font-size: 24px;
+  // @include u-media-sm {
+
+  // }
+  // @include u-media-md {
+
+  // }
+  @include u-media-lg {
+    font-size: 32px;
+  }
+  // @include u-media-xl {
+    
+  // }
+}
+.f-txt3 {
+ 
+  font-weight: normal;
+  font-size: 20px;
+  @include u-media-sm {
+    font-size: 28px;
+  }
+  // @include u-media-md {
+
+  // }
+  // @include u-media-lg {
+  
+  // }
+  // @include u-media-xl {
+    
+  // }
+}
+
+.f-txt4 {
+  font-weight: normal;
+  font-size: 20px;
+  @include u-media-sm {
+    font-size: 24px;
+  }
+  // @include u-media-md {
+
+  // }
+  // @include u-media-lg {
+  
+  // }
+  // @include u-media-xl {
+    
+  // }
+}
+
+.f-txt5 {
+  font-weight: normal;
+  font-size: 20px;
+}

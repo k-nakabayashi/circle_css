@@ -1,0 +1,14 @@
+
+//処理系だけ
+@import "./function/media";
+@import "./function/devide";
+@import "./function/img-sizing";
+@import "./function/space";
+@import "./function/autoprefex";
+@import "./function/centering";
+@import "./function/general";
+@import "./function/label";
+
+//どこでも使う変数
+@import "./valuables/base";//これが肝。ブレイクポイント設定したり、utility/areaで使われたり。
+@import "./valuables/color";

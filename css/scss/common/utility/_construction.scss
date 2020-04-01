@@ -1,0 +1,74 @@
+/*==================================================
+       　並び系
+==================================================*/
+
+// .u-container {
+//   padding-right: 10px;
+//   padding-left: 10px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.u-float--l {
+  @include u--clearfix;
+  > * {
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.u-float--r {
+  @include u--clearfix;
+  > * {
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@for $i from 1 through 10 {
+  .u-float--l-#{$i} {
+    @include u--clearfix;
+    > * {
+      float: left;
+      width: #{100 / $i + "%"};
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .u-float--r-#{$i} {
+    @include u--clearfix;
+    > * {
+      float: right;
+      width: #{ 100 / $i + "%"};
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.u-order {
+  text-align: center;
+
+  > * {
+    display: inline-block;
+  }
+}
+
+
+.u-f-l {
+  float: left;
+}
+
+.u-f-r {
+  float: right;
+}
+
+.u-ajust-inline {
+  letter-spacing: -4rem!important;
+  > * {
+    letter-spacing: normal;
+  }
+}

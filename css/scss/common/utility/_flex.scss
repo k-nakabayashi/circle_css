@@ -1,0 +1,334 @@
+/*==================================================
+       　並び系
+==================================================*/
+//グリッドレイアウト
+@mixin u_col($i) {
+  -moz-flex: 0 0 #{$i * 100 / 12 + "%"};
+  -webkit-flex: 0 0 #{$i * 100 / 12 + "%"};
+  -o-flex: 0 0 #{$i * 100 / 12 + "%"};
+  -ms-flex: 0 0 #{$i * 100 / 12 + "%"};
+  flex: 0 0 #{$i * 100 / 12 + "%"};
+  max-width: #{$i * 100 / 12 + "%"};
+}
+
+.u-row-warpper-full {
+  width: 100%;
+  padding-right: #{$v_grid + "px"};
+  padding-left: #{$v_grid + "px"};
+  margin-right: auto;
+  margin-left: auto;
+}
+.u-row-warpper {
+  padding-right: #{$v_grid + "px"};
+  padding-left: #{$v_grid + "px"};
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//.u-row-warpper
+//> .u-row > .u-col-2という具合で使う
+.u-row {
+
+  @include autoPrefex("display","flex");
+  @include  autoPrefex--front("flex-wrap", "wrap");
+
+  margin-right: #{$v_grid * (-1) + "px"};
+  margin-left: #{$v_grid * (-1) + "px"};
+  > * {
+    position: relative;
+    width: 100%;
+    padding-right: #{$v_grid + "px"};
+    padding-left: #{$v_grid + "px"};
+  }
+
+  &.isCenter-y {
+    @include autoPrefex('align-items', 'center');
+  }
+  &.isCenter-x {
+    @include autoPrefex('justify-content', 'center');
+  }
+  &.isCenter {
+    @include autoPrefex('align-items', 'center');
+    @include autoPrefex('justify-content', 'center');
+  }
+}
+
+@each $bp in $v_media_list {
+  .u-row-#{$bp} {
+    
+    @if ($bp == "sm") {
+      @include u-media-sm {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+
+        .isCenter-y {
+          @include autoPrefex('align-items', 'center');
+        }
+        .isCenter-x {
+          @include autoPrefex('justify-content', 'center');
+        }
+        .isCenter {
+          @include autoPrefex('align-items', 'center');
+          @include autoPrefex('justify-content', 'center');
+        }
+      }
+    } @else if ($bp == "md") {
+
+      @include u-media-md {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+    } @else if ($bp == "lg") {
+
+      @include u-media-lg {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+
+    } @else if ($bp == "xl") {
+
+      @include u-media-xl {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+
+    } @else if ($bp == "smx") {
+
+      @include u-media-smx {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+
+    } @else if ($bp == "mdx") {
+
+      @include u-media-mdx {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+    } @else if ($bp == "lgx") {
+      @include u-media-lgx {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+    } @else if ($bp == "xlx") {
+      @include u-media-xlx {
+        @include autoPrefex("display","flex");
+        @include  autoPrefex--front("flex-wrap", "wrap");
+        margin-right: -15px;
+        margin-left: -15px;
+        > * {
+          position: relative;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin mix-col {
+  @include autoPrefex--front("flex-preferred","0");
+  @include  autoPrefex--front("flex-basis", "0");
+  @include  autoPrefex--front("flex-positive", "1");
+  @include  autoPrefex--front("flex-grow", "1");
+
+  max-width: 100%;
+}
+.u-col {
+  @include mix-col;
+}
+
+@each $bp in $v_media_list {
+  .u-col-#{$bp} {
+    @if ($bp == "sm") {
+      @include u-media-sm {
+        @include mix-col;
+      }
+    } @else if ($bp == "md") {
+  
+      @include u-media-md {
+        @include mix-col;
+      }
+  
+    } @else if ($bp == "lg") {
+  
+      @include u-media-lg {
+        @include mix-col;
+      }
+  
+    } @else if ($bp == "xl") {
+  
+      @include u-media-xl {
+        @include mix-col;
+      }
+  
+    } @else if ($bp == "smx") {
+  
+      @include u-media-smx {
+        @include mix-col;
+      }
+  
+    } @else if ($bp == "mdx") {
+  
+      @include u-media-mdx {
+        @include mix-col;
+      }
+    } @else if ($bp == "lgx") {
+      @include u-media-lgx {
+        @include mix-col;
+      }
+    } @else if ($bp == "xlx") {
+      @include u-media-xlx {
+        @include mix-col;
+      }
+    } 
+  }
+}
+
+// $v_bp_std
+$col_Start: 12;
+@for $i from 2 through $col_Start {
+  $col_num: $i;
+  @if ($v_bp_std == "max") {
+    $col_num: $col_Start - ( $i + (-2) );
+  }
+
+  .u-col-#{$col_num} {
+    @include u_col($col_num);
+  }
+
+  @each $bp in $v_media_list {
+    .u-col-#{$col_num}-#{$bp} {
+      @if ($bp == "sm") {
+        @include u-media-sm {
+          @include u_col($col_num);
+        }
+      } @else if ($bp == "md") {
+    
+        @include u-media-md {
+          @include u_col($col_num);
+        }
+    
+      } @else if ($bp == "lg") {
+    
+        @include u-media-lg {
+          @include u_col($col_num);
+        }
+    
+      } @else if ($bp == "xl") {
+    
+        @include u-media-xl {
+          @include u_col($col_num);
+        }
+    
+      } @else if ($bp == "smx") {
+    
+        @include u-media-smx {
+          @include u_col($col_num);
+        }
+    
+      } @else if ($bp == "mdx") {
+    
+        @include u-media-mdx {
+          @include u_col($col_num);
+        }
+      } @else if ($bp == "lgx") {
+        @include u-media-lgx {
+          @include u_col($col_num);
+        }
+      } @else if ($bp == "xlx") {
+        @include u-media-xlx {
+          @include u_col($col_num);
+        }
+      } 
+    }
+  }
+  
+}
+
+.u-row {
+  &.isCenter-y {
+    @include autoPrefex('align-items', 'center');
+  }
+  &.isCenter-x {
+    @include autoPrefex('justify-content', 'center');
+  }
+  &.isCenter {
+    @include autoPrefex('align-items', 'center');
+    @include autoPrefex('justify-content', 'center');
+  }
+}
+
+@each $bp in $v_media_list {
+  .u-row-#{$bp} {
+    &.isCenter-y {
+      @include autoPrefex('align-items', 'center');
+    }
+    &.isCenter-x {
+      @include autoPrefex('justify-content', 'center');
+    }
+    &.isCenter {
+      @include autoPrefex('align-items', 'center');
+      @include autoPrefex('justify-content', 'center');
+    }
+  }
+}

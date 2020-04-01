@@ -1,0 +1,55 @@
+/* -----------------------------------------------------------
+    ページ共通(要素/属性セレクタ、疑似クラス)
+----------------------------------------------------------- */
+html {
+  font-size:62.5%; /* 分かりやすくするために1remを10pxに */
+  overflow-y: scroll; /* スクロールバーの有無によるズレ対策 */
+}
+
+body {
+  font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', '游ゴシック Medium', 'Yu Gothic Medium', YuGothic, 'メイリオ', Meiryo, sans-serif; 
+  background: #ffffff;
+  color: #333333;
+  font-size:16px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  word-wrap: break-word;
+  -webkit-txt-size-adjust: 100%;
+}
+
+::-ms-clear {
+  display: none; /* IEのテキストボックスとパスワード入力欄の「×」を消すため */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  // backface-visibility: hidden; /* Chromeのホバー時1pxのずれ解消のため */
+  transition: all linear 0.3s;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all linear 0.3s;
+}
+
+@include u-media-lgx {
+  :hover {
+    opacity: 1; /* ボタン等を押した時に2回押さないと効かないバグ対策 */
+  }
+  .open-menu {
+    right: -100%;
+  }
+  .open-menu.active {
+    right: 0;
+  }
+}

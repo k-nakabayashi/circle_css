@@ -1,0 +1,73 @@
+
+/*================================================
+        　表示切り替え
+================================================*/
+@mixin display_media_min {
+
+  //min 基準
+  .u-sm2 {
+    @include u-media-sm2x {
+      display: none!important;
+    }
+  }
+
+  .u-sm {
+    @include u-media-smx {
+      display: none!important;
+    }
+  }
+  .u-md {
+    @include u-media-mdx {
+      display: none!important;
+    }
+  }
+
+  .u-lg {
+    @include u-media-lgx {
+      display: none!important;
+    }
+  }
+  .u-xl {
+    @include u-media-xlx {
+      display: none!important;
+    }
+  }
+}
+
+@mixin display_media_max {
+  //max 基準
+  .u-xlx {
+    @include u-media-xl {
+      display: none!important;
+    }
+  }
+  .u-lgx{
+    @include u-media-lg {
+      display: none!important;
+    }
+  }
+  .u-mdx {
+    @include u-media-md {
+      display: none!important;
+    }
+  }
+  .u-smx {
+    @include u-media-sm {
+      display: none!important;
+    }
+  }
+  .u-sm2x {
+    @include u-media-sm2 {
+      display: none!important;
+    }
+  }
+}
+//優先度変える
+@if ($v_bp_std == "min") {
+  @include display_media_max;
+  @include display_media_min;
+} @else if ("max") {
+  @include display_media_max;
+  @include display_media_min;
+}
+

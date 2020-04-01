@@ -1,0 +1,167 @@
+/*==================================================
+        セクション　マージン
+==================================================*/
+/*白色のスペースを作る
+<div class="Block">
+  <div class="Block_inner">
+</div>
+.Block {
+  height: 100px;
+@at-root {
+  .Block_inner {
+    @inclde --hasWhiteSpace(right, 25vw);
+  }
+}}
+*/
+
+/*スペース位置(leftかright),スペースの広さ*/
+@mixin --hasWhiteSpace($space-position, $width-of-Space) {
+  position:relative;
+  background: #fff;
+  
+  &:after {
+    #{$space-position}: $width-of-Space * -1;
+    content: "";
+    background: #FFF;
+    position: absolute;
+    width: $width-of-Space;
+    height: 100%;
+    top: 0;
+  }
+}
+
+//MarginとPadding
+// @for $i from 1 through $v_px_max_roop {
+//   $value: $i * $v_px;
+//   @if ($v_bp_std == "max") {
+//     $value: ($v_px_max_roop * $v_px) - ( ($i - 1) * $v_px);
+//   }
+ 
+  
+//   //Margin
+//   .u-m-#{$value} {
+//     margin: #{$value + "px"};
+//   }
+//   .u-my-#{$value} {
+//     margin-top: #{$value + "px"};
+//     margin-bottom: #{$value + "px"};
+//   }
+
+//   .u-mx-#{$value} {
+//     margin-left: #{$value + "px"};
+//     margin-right: #{$value + "px"};
+//   }
+
+//   .u-mt-#{$value} {
+//     margin-top: #{$value + "px"};
+//   }
+
+//   .u-mb-#{$value} {
+//     margin-bottom: #{$value + "px"};
+//   }
+
+//   .u-ml-#{$value} {
+//     margin-left: #{$value + "px"};
+//   }
+
+//   .u-mr-#{$value} {
+//     margin-right: #{$value + "px"};
+//   }
+
+//   //ネガティブマージン
+//   .u-mt-n#{$value} {
+//     margin-top: #{($value)*(-1) + "px"};
+//   }
+
+//   .u-mb-n#{$value} {
+//     margin-bottom: #{($value)*(-1) + "px"};
+//   }
+
+//   .u-ml-n#{$value} {
+//     margin-left: #{($value)*(-1) + "px"};
+//   }
+
+//   .u-mr-n#{$value} {
+//     margin-right: #{($value)*(-1) + "px"};
+//   }
+
+//   //Padding
+//   .u-p-#{$value} {
+//     padding: #{$value + "px"};
+//   }
+
+//   .u-py-#{$value} {
+//     padding-top: #{$value + "px"};
+//     padding-bottom: #{$value + "px"};
+//   }
+
+//   .u-px-#{$value} {
+//     padding-left: #{$value + "px"};
+//     padding-right: #{$value + "px"};
+//   }
+
+//   .u-pt-#{$value} {
+//     padding-top: #{$value + "px"};
+//   }
+  
+//   .u-pb-#{$value} {
+//     padding-bottom: #{$value + "px"};
+//   }
+  
+//   .u-pl-#{$value} {
+//     padding-left: #{$value + "px"};
+//   }
+  
+//   .u-pr-#{$value} {
+//     padding-right: #{$value + "px"};
+//   }
+// }
+
+// $percent: 5;
+// //高さと幅　パーセント
+// @for $i from 0 through 20 {
+//   .u-w-#{$i * $percent} {
+//     width: #{$i * $percent + "%"};
+//   }
+//   .u-h-#{$i * $percent} {
+//     height: #{$i * $percent + "%"};
+//   }
+
+//   .u-child-w-#{$i * $percent} {
+//     > * {
+//       width: #{$i * $percent + "%"};
+//     }
+//   }
+// }
+// $large_px: 20;
+// @for $i from 0 through 30 {
+//   .u-w-p-#{$i * $large_px} {
+//     width: #{$i * $large_px + "px"}!important;
+//   }
+
+//   .u-h-p-#{$i * $large_px} {
+//     height: #{$i * $large_px + "px"};
+//   }
+// }
+
+// .u-w-100-special {
+//   @include u-mediaMax(560px) {
+//     width: 100%;
+//   }
+// }
+
+
+
+/*================================================
+        auto
+===============================================--*/
+// .u-w-auto {
+//   width: auto!important;
+// }
+// .u-h-auto {
+//   height: auto!important;
+// }
+
+/*================================================
+        レスポンシブ　マージン　パディング
+===============================================--*/

@@ -1,0 +1,59 @@
+
+/*==================================================
+  インデント系
+==================================================*/
+%u-indent_base {
+  position: relative;
+  display: block;
+
+  &:before {
+    padding: 5px 0;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+%u-indent, .u-indent, .u-indent2 {
+  @extend %u-indent_base;
+}
+
+@for $i from 1 through length($v_indent_list) {
+  .u-indent#{$i} {
+    padding-left: #{nth($v_indent_list, $i)};
+  }
+  .u-has-dot#{$i} {
+    list-style-type: disc;
+    margin-left: #{nth($v_indent_list, $i)};
+  }
+}
+
+
+%has-asta, .has-asta {
+  &:before {
+    content: "※";
+  }
+}
+%has-circle, .has-circle {
+  &:before {
+    content: "●";
+  }
+}
+
+.u-Num {
+  @for $i from 1 through 20 {
+    > *:nth-of-type(#{$i}):before{
+      content: "#{$i}.";
+    }
+
+    @if ($i < 10) {
+      > *:nth-of-type(#{$i}):before{
+        left: 5px;
+      }
+    }
+  }
+}

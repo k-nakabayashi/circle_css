@@ -1,0 +1,21 @@
+
+//==================================================
+// input area
+//==================================================
+
+%label_over {
+  position: relative;
+  > input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0!important;
+    margin: 0;
+    border: none!important;
+    @include autoPrefex--front('visibility', 'hidden!important');
+  }
+}

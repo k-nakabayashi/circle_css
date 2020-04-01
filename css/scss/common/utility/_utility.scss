@@ -1,0 +1,18 @@
+//ページ共通で使うスタイル※レイヤーを無視する
+@import "general";//クリアフィックスなど
+@import "area";//余白関連
+@import "wrapper";//コンテンツの並びや余白関連
+@import "text";//見出しなど
+@import "icon";
+@import "list";// <li>の設定
+@import "img-sizing";
+@import "form";//reset
+@import "position";
+//フロート、インラインブロックを使うレイアウト用のスタイル
+@import "construction";
+//ボーダー、アンダーライン、線に関連するスタイル
+@import "line";
+@import "flex";
+@import "media";
+@import "space";
+@import "indent";

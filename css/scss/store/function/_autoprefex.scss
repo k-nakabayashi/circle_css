@@ -1,0 +1,42 @@
+@mixin  autoPrefex($style, $prop, $default:1) {
+  $prefex_list: "-moz-", "-webkit-", "-o-", "-ms-";
+
+  @each $prefex in $prefex_list {
+    #{$style}: #{$prefex}#{$prop};
+  }
+  @if ($default==1) {
+    #{$style}: #{$prop};
+  }
+ 
+}
+
+@mixin  autoPrefex--front($style, $prop, $default:1) {
+  $prefex_list: "-moz-", "-webkit-", "-o-", "-ms-";
+
+  @each $prefex in $prefex_list {
+    #{$prefex}#{$style}: #{$prop};
+  }
+  @if ($default==1) {
+    #{$style}: #{$prop};
+  }
+}
+
+// @mixin  autoPrefex-multi($style_list) {
+//   $prefex_list: "-moz-", "-weblit-", "-o-", "-ms";
+
+//   @each $prefex in $prefex_list {
+    
+//     @each $style in $style_list {
+//       #{nth($style,1)}: #{$prefex}#{$nth($style,2)};
+//     }
+//   }
+// }
+
+// $style = [
+//   [attr, prop],
+//   [attr, prop],
+//   [attr, prop],
+//   [attr, prop],
+//   [attr, prop],
+//   [attr, prop],
+// ];

@@ -1,0 +1,28 @@
+@charset "utf-8";
+//CSSファイル内で共通で使う変数や処理
+@import "./store/store";
+
+
+//共通スタイル objects
+// @import "./project/objects/component/content";
+// @import "./project/objects/component/hero";
+// @import "./project/objects/component/breadcrumb";
+@import "./project/objects/other/utility";
+@import "./project/objects/other/wrapper";
+// @import "./project/objects/other/old";
+@import "./project/objects/component/hero";
+@import "./project/objects/atomic/btn";
+@import "./project/objects/atomic/other";
+
+// @import "./project/objects/component/";
+// @import "./project/objects/elementary-particle/";
+
+//ページ毎のスタイル
+@import "./project/pages/company";
+@import "./project/pages/contact";
+@import "./project/pages/form";
+@import "./project/pages/map";
+@import "./project/pages/news";
+@import "./project/pages/product";
+@import "./project/pages/terms";
+@import "./project/pages/top";

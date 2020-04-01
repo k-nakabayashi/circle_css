@@ -1,0 +1,41 @@
+/*===========================================
+                    アイコン
+===========================================*/
+/*
+<ul class="List-Block">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+.List-Block {
+  @include c-text-list-number(20px, 5);
+}
+数字の横幅、liの数*/
+@mixin c-text-list-number($width, $list-length) { 
+  li {
+    padding-left: $width;
+    position: relative;
+  }
+  li:before {
+    display: inline-block;
+    width: $width;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+  }
+  @for $i from 1 through $list-length {
+
+    li:nth-child(#{$i}):before {
+      content: "#{$i}";
+    }
+  }
+}
+

@@ -1,0 +1,40 @@
+/*============================================================
+                      汎用
+============================================================*/
+.u--clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.u--clearfix-after:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*================================================
+        その他
+===============================================--*/
+
+.isBold {
+  font-weight: bold!important;
+}
+
+.isHidden {
+  display: none!important;
+}
+
+.isHidden2 {
+  visibility: hidden!important;
+}
+
+.isHidden3 {
+  opacity: 0!important;
+}
+
+.isHidden4 {
+  @include autoPrefex('transform', 'translateX(-200vw)!important');
+}
+

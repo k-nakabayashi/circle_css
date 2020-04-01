@@ -1,0 +1,22 @@
+.u-space--before {
+  position: relative;
+  &:before {
+    content: "";
+    background: #FFF;
+    position: absolute;
+    width: 27.5vw;
+    height: 100%;
+    top: 0;
+  }
+}
+.u-space--after {
+  position: relative;
+  &:before {
+    content: "";
+    background: #FFF;
+    position: absolute;
+    width: 27.5vw;
+    height: 100%;
+    top: 0;
+  }
+}

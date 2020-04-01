@@ -1,0 +1,264 @@
+/*==================================================
+        container
+==================================================*/
+//左右パディングを消して横幅一杯に。
+%full_container {
+  &.isFull {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.isFull-smx {
+    @include u-media-smx {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.u-container1 {
+  margin: 0 auto;
+  padding-left: $v_container_px;
+  padding-right: $v_container_px;
+  @include u-media-sm {
+    max-width: calc(#{$v_container_width1} + #{$v_container_px_sm}*2);
+    padding-left: $v_container_px_sm;
+    padding-right: $v_container_px_sm;
+  }
+  // @include u-media-md {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_md}*2);
+  //   padding-left: $v_container_px_md;
+  //   padding-right: $v_container_px_md;
+  // }
+  // @include u-media-lg {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_lg}*2);
+  //   padding-left: $v_container_px_lg;
+  //   padding-right: $v_container_px_lg;
+  // }
+  // @include u-media-xl {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_xl}*2);
+  //   padding-left: $v_container_px_xl;
+  //   padding-right: $v_container_px_xl;
+  // }
+}
+
+.u-container2 {
+  margin: 0 auto;
+  padding-left: $v_container_px;
+  padding-right: $v_container_px;
+  @include u-media-sm {
+    max-width: calc(#{$v_container_width2} + #{$v_container_px_sm}*2);
+    padding-left: $v_container_px_sm;
+    padding-right: $v_container_px_sm;
+  }
+
+  // @include u-media-md {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_md}*2);
+  //   padding-left: $v_container_px_md;
+  //   padding-right: $v_container_px_md;
+  // }
+  // @include u-media-lg {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_lg}*2);
+  //   padding-left: $v_container_px_lg;
+  //   padding-right: $v_container_px_lg;
+  // }
+  // @include u-media-xl {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_xl}*2);
+  //   padding-left: $v_container_px_xl;
+  //   padding-right: $v_container_px_xl;
+  // }
+}
+
+.u-container3 {
+  margin: 0 auto;
+  padding-left: $v_container_px;
+  padding-right: $v_container_px;
+  @include u-media-sm {
+    max-width: calc(#{$v_container_width2} + #{$v_container_px_sm}*2);
+    padding-left: $v_container_px_sm;
+    padding-right: $v_container_px_sm;
+  }
+  // @include u-media-md {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_md}*2);
+  //   padding-left: $v_container_px_md;
+  //   padding-right: $v_container_px_md;
+  // }
+  // @include u-media-lg {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_lg}*2);
+  //   padding-left: $v_container_px_lg;
+  //   padding-right: $v_container_px_lg;
+  // }
+  // @include u-media-xl {
+  //   max-width: calc(#{$v_container_width1} + #{$v_container_px_xl}*2);
+  //   padding-left: $v_container_px_xl;
+  //   padding-right: $v_container_px_xl;
+  // }
+}
+
+.u-container1, .u-container2,.u-container3 {
+  @extend %full_container;
+}
+
+/*==================================================
+       縦マージン top
+==================================================*/
+.u-Above1 {
+  > * {
+    margin-top: $v_wrapper1;
+    @include u-media-sm {
+      margin-top: $v_wrapper1_sm;
+    }
+    // @include u-media-md {
+    //   margin-top: $v_wrapper1_md;
+    // }
+    // @include u-media-lg {
+    //   margin-top: $v_wrapper1_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-top: $v_wrapper1_xl;
+    // }
+  }
+}
+.u-Above2 {
+  > * {
+    margin-top: $v_wrapper2;
+    @include u-media-sm {
+      margin-top: $v_wrapper2_sm;
+    }
+    // @include u-media-md {
+    //   margin-top: $v_wrapper2_md;
+    // }
+    // @include u-media-lg {
+    //   margin-top: $v_wrapper2_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-top: $v_wrapper2_xl;
+    // }
+  }
+}
+
+.u-Above3 {
+  > * {
+    margin-top: $v_wrapper3;
+    @include u-media-sm {
+      margin-top: $v_wrapper3_sm;
+    }
+    // @include u-media-md {
+    //   margin-top: $v_wrapper3_md;
+    // }
+    // @include u-media-lg {
+    //   margin-top: $v_wrapper3_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-top: $v_wrapper3_xl;
+    // }
+  }
+}
+
+.u-Above4 {
+  > * {
+    margin-top: $v_wrapper4;
+    @include u-media-sm {
+      margin-top: $v_wrapper4_sm;
+    }
+    // @include u-media-md {
+    //   margin-top: $v_wrapper4_md;
+    // }
+    // @include u-media-lg {
+    //   margin-top: $v_wrapper4_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-top: $v_wrapper4_xl;
+    // }
+  }
+}
+.u-Above1, .u-Above2, .u-Above3, .u-Above4 {
+  &.isMt0 {
+    margin-top: 0;
+  }
+}
+/*==================================================
+       縦マージン bottom
+==================================================*/
+
+.u-Below1 {
+  > * {
+    margin-bottom: $v_wrapper1;
+    @include u-media-sm {
+      margin-bottom: $v_wrapper1_sm;
+    }
+    // @include u-media-md {
+    //   margin-bottom: $v_wrapper1_md;
+    // }
+    // @include u-media-lg {
+    //   margin-bottom: $v_wrapper1_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-bottom: $v_wrapper1_xl;
+    // }
+  }
+}
+.u-Below2 {
+  > * {
+    margin-bottom: $v_wrapper2;
+    @include u-media-sm {
+      margin-bottom: $v_wrapper2_sm;
+    }
+    // @include u-media-md {
+    //   margin-bottom: $v_wrapper2_md;
+    // }
+    // @include u-media-lg {
+    //   margin-bottom: $v_wrapper2_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-bottom: $v_wrapper2_xl;
+    // }
+  }
+}
+
+.u-Below3 {
+  > * {
+    margin-bottom: $v_wrapper3;
+    @include u-media-sm {
+      margin-bottom: $v_wrapper3_sm;
+    }
+    // @include u-media-md {
+    //   margin-bottom: $v_wrapper3_md;
+    // }
+    // @include u-media-lg {
+    //   margin-bottom: $v_wrapper3_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-bottom: $v_wrapper3_xl;
+    // }
+  }
+}
+
+.u-Below4 {
+  > * {
+    margin-bottom: $v_wrapper4;
+    @include u-media-sm {
+      margin-bottom: $v_wrapper4_sm;
+    }
+    // @include u-media-md {
+    //   margin-bottom: $v_wrapper4_md;
+    // }
+    // @include u-media-lg {
+    //   margin-bottom: $v_wrapper4_lg;
+    // }
+    // @include u-media-xl {
+    //   margin-bottom: $v_wrapper4_xl;
+    // }
+  }
+}
+.u-Below1, .u-Below2, .u-Below3, .u-Below4 {
+  &.isMb0 {
+    margin-bottom: 0;
+  }
+}
+/*=================================================
+     ボタン用
+==================================================*/
+.u-Btn-Wrapper {
+  text-align: center;
+}

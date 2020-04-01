@@ -1,0 +1,121 @@
+@import "color";
+
+//================================================
+//       ブレイクポイント
+//================================================
+//ブレイクポイントの基準 コンパイルの順序を設定している。
+//minかmaxを指定　
+//minなら
+//数値が高いクラスが優先度が高くなる（u-mt-10 u-mt-20と充てると、u-mt-20が適応される)
+//ブレイクポインもmin系統の優先度が高くなる (u-mt-10-sm u-mt-smx なら u-mt-10-smが適応される)
+//maxなら↑の優先度が逆転する
+//ＰＣから作るならmin
+$v_bp_std: "min";
+
+//min ブレイクポイント
+//bootstrap準拠
+// $v_sm: 576;
+// $v_md: 768;
+// $v_lg: 992;
+// $v_xl: 1200;
+// //max　ブレイクポイント
+// $v_xlx: 1199;
+// $v_lgx: 991;
+// $v_mdx: 767;
+// $v_smx: 575;
+
+//min ブレイクポイント
+$v_sm2: 321;//追加 メディアクエリmixinと表示非表示スタイルだけあります。
+$v_sm: 415;
+$v_md: 691;
+$v_lg: 769;
+$v_xl: 1025;
+//max　ブレイクポイント
+$v_xlx: 1024;
+$v_lgx: 768;
+$v_mdx: 690;
+$v_smx: 414;
+$v_sm2x: 320;//追加 メディアクエリmixinと表示非表示スタイルだけあります。
+
+//ブレイクポイント設定
+$v_bp_min_map: ("sm2":$v_sm2, "sm":$v_sm, "md": $v_md, "lg":$v_lg, "xl":$v_xl,);
+$v_bp_max_map: ("xlx":$v_xlx, "lgx":$v_lgx, "mdx":$v_mdx, "smx":$v_smx, "sm2x":$v_sm2x,);
+
+//コンパイル順序に関係
+$v_bp_min: map-keys($v_bp_min_map);
+$v_bp_max: map-keys($v_bp_max_map);
+$v_media_list: ();
+@if ($v_bp_std == "min") {
+  $v_media_list: join($v_bp_max, $v_bp_min);
+} @else if ("max") {
+  $v_media_list: join($v_bp_min, $v_bp_max);
+}
+
+
+//================================================
+//    areaユーティリティで使用
+//================================================
+$v_px: 5;//8の倍数でpxが指定される
+$v_px_max_roop: 9;// 8*50pxまで作れる。
+
+$v_percent: 5;//5の倍数で%が指定される
+$v_percent_max_roop: (100 / $v_percent);//100%まで作れる
+
+//グリッドレイアウト　各アイテム間の余白
+$v_grid: 15;
+
+
+//================================================
+//       wrapperユーティリティで使用
+//================================================
+//コンテイナー
+$v_container_width1: 850px;
+$v_container_width2: 1000px;
+$v_container_width3: 1200px;
+$v_container_px: 4%;
+$v_container_px_sm: 10px;
+// $v_container_px_md: 10px;
+// $v_container_px_lg: 10px;
+// $v_container_px_xl: 10px;
+
+//縦マージン
+$v_wrapper1: 20px;
+$v_wrapper1_sm: 40px;
+// $v_wrapper1_md: 40px;
+// $v_wrapper1_lg: 40px;
+// $v_wrapper1_xl: 40px;
+
+$v_wrapper2: 30px;
+$v_wrapper2_sm: 45px;
+// $v_wrapper2_md: 40px;
+// $v_wrapper2_lg: 40px;
+// $v_wrapper2_xl: 40px;
+
+$v_wrapper3: 45px;
+$v_wrapper3_sm: 60px;
+// $v_wrapper3_md: 40px;
+// $v_wrapper3_lg: 40px;
+// $v_wrapper3_xl: 40px;
+
+$v_wrapper4: 60px;
+$v_wrapper4_sm: 90px;
+// $v_wrapper4_md: 40px;
+// $v_wrapper4_lg: 40px;
+// $v_wrapper4_xl: 40px;
+
+//================================================
+//     indentユーティリティで使用
+//================================================
+
+$v_indent_list:( 1.2em, 1.6em, 2.0em, 2.4em);
+
+
+
+//================================================
+//     projectsのwrapperで使用
+//================================================
+$v_header: 80px;
+$v_header_sm: 80px;
+// $v_header_md: 80px;
+// $v_header_lg: 80px;
+// $v_header_xl: 80px;
