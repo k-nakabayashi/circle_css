@@ -2,7 +2,7 @@
 ## Everything is up to you
 Circle CSS **keeps evolving**. there is no end.
 
-* Anyone can easily do markup and refactor of HTML&CSS.
+* Anyone can easily do markup and refactor of markup.
 * This is close to something like a FrameWork.
 * This has a kind of Markup Patterns, inspired by Bootrap, FLOCSS, BEM, Atomic-Design, Scopded CSS and Object-Oriented Programing.
 
@@ -213,7 +213,7 @@ If you want to make scss file, you can do. It is up to you.
 
 ---
 
-## offer for respinsive css
+## offer for respnsive css
 
 * ***Whitch min or max should be used***
   * Mainly, Circle CSS adopts Min when starting with PC Style.
